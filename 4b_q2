@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+void nat(int i,int n)
+{
+  if(i==n)
+  { 
+   cout<<"\n"<<i;
+   return;
+  }
+  cout<<"\n"<<i;
+  return nat(i+1, n);
+}
+   
+int main()
+{
+  int num;
+  cout<<"Enter the number\n";
+  cin>>num;
+  cout<<"\nThe numbers are: \n";
+  nat(1,num);
+  return 0;
+}
