@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int LCM(int n1,int n2,int i)
+{
+	if(i%n1==0 && i%n2==0)
+	return i;
+	
+	else 
+	LCM(n1,n2,i+1);
+}
+
+int main() {
+	int n1,n2,ans;
+	cout <<"Enter two numbers\n";
+	cin >>n1>>n2;
+	if (n1>n2)
+	ans = LCM(n1,n2,2);
+	else
+	if (n2>n1)
+	ans = LCM(n2,n1,2);
+	cout <<"The of two numbers is = "<<ans;
+	return 0;
+}
