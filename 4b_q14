@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+int s=0;
+int sum(int a[],int i,int l){
+	if(i>l){
+		return s;
+	}
+	else
+	{
+		s+=a[i];
+		sum(a,i+1,l);
+	}
+}
+
+int main() {
+	int size;
+	cout<<"Enter size of array\n";
+	cin>>size;
+            int a[size];
+	cout<<"Enter elements of array\n";
+	for(int j=1;j<=size;j++){
+	cin>>a[j];
+	}
+	cout<<"Sum of elements of array=\n"<<sum(a,1,size);
+	return 0;
+}
