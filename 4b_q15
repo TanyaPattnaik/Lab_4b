@@ -1,1 +1,33 @@
 #include <iostream>
+using namespace std;
+void min_max(int numbers[],int c,int size,int min,int max)
+{
+	if(c<size)
+  {
+		if(numbers[c]<min)
+			min=numbers[c];
+		if(numbers[c]>max)
+			max=numbers[c];
+		min_max(numbers,++c,size,min,max);
+	}
+	else
+  {
+		cout<<"Maximum = "<<max<<endl;
+		cout<<"Minimum = "<<min<<endl;
+	}
+}
+
+int main()
+{
+  int size;
+  cout<<"Enter the size of array:\n ";
+  cin>>size;
+  int arr[size];
+  for(int i=0;i<size;i++)
+  {
+		cout<<"Enter your element:";
+		cin>>arr[i];
+	}
+  min_max(arr,0,size);
+  return 0;
+}
